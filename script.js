@@ -97,7 +97,7 @@ function startGame() {
     }
   }, 1000);
 
-  invaderInterval = setInterval(createInvader, 2000); // Spawn invaders every 2 seconds
+  invaderInterval = setInterval(createInvader, 2000); 
 }
 
 function endGame() {
