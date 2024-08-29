@@ -29,7 +29,7 @@
     height: 40px;
     background-color: transparent;
     position: absolute;
-    background-image: url('invaders.png') ; /* Replace with an actual image URL */
+    background-image: url('invaders.png');
     background-size: contain;
     background-repeat: no-repeat;
   }  
