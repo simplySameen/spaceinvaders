@@ -1,0 +1,83 @@
+#gameArea {
+  width: 400px;
+  height: 600px;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 2px solid white;
+}
+
+#spaceship {
+  width: 40px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  bottom: 10px;
+  left: 180px;
+}
+
+.laser {
+  width: 4px;
+  height: 10px;
+  background-color: red;
+  position: absolute;
+}
+
+.invader {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    position: absolute;
+    background-image: url('invaders.png') ; /* Replace with an actual image URL */
+    background-size: contain;
+    background-repeat: no-repeat;
+  }  
+
+#score, #timer {
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  top: 10px;
+}
+
+#score {
+  left: 10px;
+}
+
+#timer {
+  right: 10px;
+}
+
+#gameOverScreen {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#gameOverScreen h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+#gameOverScreen p {
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+#restartButton {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
