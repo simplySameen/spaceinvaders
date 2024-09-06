@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Invaders In HTML</title> <!-- Website title on browser tab -->
-    <link rel="icon" href="favicon.ico"> <!-- Website .ico icon on browser tab -->
+    <title>Space Invaders in HTML</title> <!-- Website title on browser tab -->
+    <link rel="icon" href="space_invaders_icon.ico"> <!-- Website .ico icon on browser tab -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="gameArea">
-        <div id="spaceship"></div>
+        <div id="healthBar">
+            <div class="healthBlock"></div>
+            <div class="healthBlock"></div>
+            <div class="healthBlock"></div>
+            <div class="healthBlock"></div>
+            <div class="healthBlock"></div>
+        </div>          
+        <div id="spaceship">
+            <img src="ship.jpg" alt="Spaceship"> 
+        </div>
         <div id="score">Score: 0</div>
         <div id="timer">Time: 30</div>
         <div id="gameOverScreen">
@@ -22,4 +31,3 @@
     <script src="script.js" type="module"></script>
 </body>
 </html>
-  
