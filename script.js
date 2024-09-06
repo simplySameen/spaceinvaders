@@ -5,7 +5,7 @@ const restartButton = document.getElementById('restartButton');
 const healthBlocks = document.querySelectorAll('.healthBlock'); // New line
 let spaceshipPosition = 180;
 let score = 0;
-let timeLeft = 30;
+let timeLeft = 180;
 let health = 5; // Tracks remaining health blocks
 let gameInterval;
 let invaderInterval;
