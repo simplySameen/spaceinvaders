@@ -6,15 +6,21 @@
   overflow: hidden;
   margin: 0 auto;
   border: 2px solid white;
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 #spaceship {
-  width: 40px;
-  height: 20px;
-  background-color: white;
   position: absolute;
   bottom: 10px;
   left: 180px;
+  width: 50px;
+  height: 50px;
+}
+
+#spaceship img {
+  width: 100%;
+  height: 100%;
 }
 
 .laser {
@@ -29,7 +35,7 @@
     height: 40px;
     background-color: transparent;
     position: absolute;
-    background-image: url('invaders.png');
+    background-image: url('invaders.png') ; /* Replace with an actual image URL */
     background-size: contain;
     background-repeat: no-repeat;
   }  
@@ -80,4 +86,22 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+#healthBar {
+  display: flex;
+  justify-content: space-around;
+  width: 150px;
+  margin: 10px auto;
+}
+
+.healthBlock {
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  border: 2px solid black;
+}
+
+.lostHealth {
+  background-color: red;
 }
