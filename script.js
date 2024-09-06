@@ -2,9 +2,11 @@ const spaceship = document.getElementById('spaceship');
 const gameOverScreen = document.getElementById('gameOverScreen');
 const finalScoreDisplay = document.getElementById('finalScore');
 const restartButton = document.getElementById('restartButton');
+const healthBlocks = document.querySelectorAll('.healthBlock'); // New line
 let spaceshipPosition = 180;
 let score = 0;
 let timeLeft = 30;
+let health = 5; // Tracks remaining health blocks
 let gameInterval;
 let invaderInterval;
 
@@ -53,6 +55,7 @@ function createInvader() {
     if (parseInt(invader.style.top) > 600) {
       clearInterval(invaderInterval);
       invader.remove();
+      decreaseHealth(); // Decrease health if invader reaches the bottom
     }
   }, 20);
 
@@ -81,9 +84,21 @@ function checkCollision(laser, laserInterval) {
   });
 }
 
+function decreaseHealth() {
+  if (health > 0) {
+    healthBlocks[health - 1].classList.add('lostHealth'); // Change the color of the health block
+    health--;
+    if (health <= 0) {
+      endGame();
+    }
+  }
+}
+
 function startGame() {
   timeLeft = 30;
   score = 0;
+  health = 5; // Reset health
+  healthBlocks.forEach((block) => block.classList.remove('lostHealth')); // Reset the health bar
   document.getElementById('score').textContent = `Score: ${score}`;
   document.getElementById('timer').textContent = `Time: ${timeLeft}`;
   gameOverScreen.style.display = 'none';
@@ -97,7 +112,7 @@ function startGame() {
     }
   }, 1000);
 
-  invaderInterval = setInterval(createInvader, 2000); 
+  invaderInterval = setInterval(createInvader, 2000); // Spawn invaders every 2 seconds
 }
 
 function endGame() {
