@@ -95,7 +95,7 @@ function decreaseHealth() {
 }
 
 function startGame() {
-  timeLeft = 30;
+  timeLeft = 180;
   score = 0;
   health = 5; // Reset health
   healthBlocks.forEach((block) => block.classList.remove('lostHealth')); // Reset the health bar
